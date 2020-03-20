@@ -12,7 +12,7 @@ after_success:
   - docker build -t gmahe/multi-server ./server
   - docker build -t gmahe/multi-worker ./worker
   # Login to docker
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" -- password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Push to dockerhub
   - docker push gmahe/multi-client
   - docker push gmahe/multi-nginx
