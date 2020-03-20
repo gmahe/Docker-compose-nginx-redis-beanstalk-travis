@@ -14,7 +14,7 @@ after_success:
   # Login to docker
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" -- password-stdin
   # Push to dockerhub
-  docker push gmahe/multi-client
-  docker push gmahe/multi-nginx
-  docker push gmahe/multi-server
-  docker push gmahe/multi-worker
+  - docker push gmahe/multi-client
+  - docker push gmahe/multi-nginx
+  - docker push gmahe/multi-server
+  - docker push gmahe/multi-worker
